@@ -1,0 +1,37 @@
+@api = http://localhost:3000/pagos
+
+### Obteniendo todos los pagos
+GET {{api}}
+
+### Creando una solicitud de pago
+POST {{api}}
+Content-Type: application/json
+
+{
+    "notarjeta_org": "2222222222222222",
+    "notarjeta_dst": "3333333333333333",
+    "Fecha_venci_org": "11/24",
+    "Token_org": "656",
+    "mto": 3100
+}
+
+### Obteniendo un pago por id
+GET {{api}}/1
+
+### Eliminando un pago
+DELETE {{api}}/7
+
+### Contando los objetos Pago
+GET {{api}}/count
+
+### Actualizando un registro
+PUT {{api}}/5
+Content-Type: application/json
+
+{
+    "Notarjeta_org": "1111222233334444",
+    "Notarjeta_Dst": "4444333322221111",
+    "Fecha_venci_org": "03/25",
+    "Token_org": "444",
+    "mto": 810
+}

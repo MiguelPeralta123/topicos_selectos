@@ -1,13 +1,17 @@
 import express from "express";
 import config from "./config";
 
-import pagosRoutes from "./routes/pagos.routes"
+import pagosRoutes from "./routes/pagos.routes";
 
-const app = express()
+const app = express();
 
 //settings
-app.set("port", config.port)
+app.set("port", config.port);
 
-app.use(pagosRoutes)
+// middlewares
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-export default app
+app.use(pagosRoutes);
+
+export default app;
