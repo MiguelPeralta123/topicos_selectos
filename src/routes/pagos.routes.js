@@ -21,6 +21,6 @@ router.get("/pagos/:id", getPagoById);
 
 router.delete("/pagos/:id", deletePagoById);
 
-router.put("pagos/:id", updatePagoById);
+router.put("/pagos/:id", updatePagoById);
 
 export default router;

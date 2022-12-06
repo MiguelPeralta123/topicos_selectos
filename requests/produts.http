@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ### Obteniendo un pago por id
-GET {{api}}/1
+GET {{api}}/5
 
 ### Eliminando un pago
 DELETE {{api}}/7
@@ -29,8 +29,8 @@ PUT {{api}}/5
 Content-Type: application/json
 
 {
-    "Notarjeta_org": "1111222233334444",
-    "Notarjeta_Dst": "4444333322221111",
+    "notarjeta_org": "1111222233334444",
+    "notarjeta_dst": "4444333322221111",
     "Fecha_venci_org": "03/25",
     "Token_org": "444",
     "mto": 810

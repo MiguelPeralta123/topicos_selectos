@@ -104,7 +104,7 @@ export const updatePagoById = async (req, res) => {
 
   try {
     const pool = await getConnection();
-    const result = await pool
+    await pool
       .request()
       .input("Notarjeta_org", sql.VarChar, notarjeta_org)
       .input("Notarjeta_Dst", sql.VarChar, notarjeta_dst)
@@ -113,7 +113,14 @@ export const updatePagoById = async (req, res) => {
       .input("mto", sql.Float, mto)
       .input("id", sql.Int, id)
       .query(queries.updatePagoById);
-    res.json({id, notarjeta_dst, notarjeta_dst, Fecha_venci_org, Token_org, mto});
+    res.json({
+      id,
+      notarjeta_org,
+      notarjeta_dst,
+      Fecha_venci_org,
+      Token_org,
+      mto,
+    });
   } catch (error) {
     res.status(500);
     res.send(error.message);
