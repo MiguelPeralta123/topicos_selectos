@@ -1,0 +1,39 @@
+@api = http://localhost:3000/envios
+
+### Obteniendo todos los envios
+GET {{api}}
+
+### Creando una solicitud de envio
+POST {{api}}
+Content-Type: application/json
+
+{
+    "destinatario": "cliente 1",
+    "productos": "botella vodka",
+    "nombre_destinatario": "jose maria gutierrez",
+    "direccion_origen": "col centro",
+    "direccion_destino": "av tecnologico",
+    "fecha_entrega": 2022-12-09
+}
+
+### Obteniendo un envigo por id
+GET {{api}}/5
+
+### Eliminando un envio
+DELETE {{api}}/7
+
+### Contando los objetos Envio
+GET {{api}}/count
+
+### Actualizando un registro
+PUT {{api}}/5
+Content-Type: application/json
+
+{
+    "destinatario": "cliente 2",
+    "productos": "botella ron",
+    "nombre_destinatario": "jose maria gutierrez",
+    "direccion_origen": "col centro",
+    "direccion_destino": "av tecnologico",
+    "fecha_entrega": 2022-12-09
+}

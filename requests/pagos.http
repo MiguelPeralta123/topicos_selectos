@@ -29,9 +29,9 @@ PUT {{api}}/5
 Content-Type: application/json
 
 {
-    "notarjeta_org": "1111222233334444",
-    "notarjeta_dst": "4444333322221111",
-    "Fecha_venci_org": "03/25",
-    "Token_org": "444",
-    "mto": 810
+    "notarjeta_org": "9999888877776666",
+    "notarjeta_dst": "6666777788889999",
+    "Fecha_venci_org": "09/24",
+    "Token_org": "159",
+    "mto": 900
 }
