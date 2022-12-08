@@ -8,32 +8,32 @@ POST {{api}}
 Content-Type: application/json
 
 {
-    "destinatario": "cliente 1",
+    "destinatario": "cliente 3",
     "productos": "botella vodka",
-    "nombre_destinatario": "jose maria gutierrez",
+    "nombre_destinatario": "orlando montoya",
     "direccion_origen": "col centro",
     "direccion_destino": "av tecnologico",
-    "fecha_entrega": 2022-12-09
+    "fecha_entrega": "2022-12-09"
 }
 
 ### Obteniendo un envigo por id
-GET {{api}}/5
+GET {{api}}/6
 
 ### Eliminando un envio
-DELETE {{api}}/7
+DELETE {{api}}/3
 
 ### Contando los objetos Envio
 GET {{api}}/count
 
 ### Actualizando un registro
-PUT {{api}}/5
+PUT {{api}}/6
 Content-Type: application/json
 
 {
     "destinatario": "cliente 2",
     "productos": "botella ron",
-    "nombre_destinatario": "jose maria gutierrez",
+    "nombre_destinatario": "orlando montoya",
     "direccion_origen": "col centro",
     "direccion_destino": "av tecnologico",
-    "fecha_entrega": 2022-12-09
+    "fecha_entrega": "2022-12-09"
 }

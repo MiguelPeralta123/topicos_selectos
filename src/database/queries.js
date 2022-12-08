@@ -18,5 +18,14 @@ export const queries = {
   getEnvioById: "SELECT * FROM Envios WHERE id_envio = @id",
   deleteEnvio: "DELETE FROM Envios WHERE id_envio = @id",
   countEnvios: "SELECT COUNT (*) FROM Envios",
-  updateEnvioById: "UPDATE Envios SET destinatario = @destinatario, productos = @productos, nombre_destinatario = @nombre_destinatario, direccion_origen = @direccion_origen, direccion_destino = @direccion_destino, fecha_entrega = @fecha_entrega WHERE id_envio = @id"
+  updateEnvioById: "UPDATE Envios SET destinatario = @destinatario, productos = @productos, nombre_destinatario = @nombre_destinatario, direccion_origen = @direccion_origen, direccion_destino = @direccion_destino, fecha_entrega = @fecha_entrega WHERE id_envio = @id",
+
+  // Queries para proveedores
+  getAllProv: "SELECT * FROM Prov",
+  createProv:
+    "INSERT INTO Prov (nombreComercial, razonSocial, rfc, direccion, telefono, representanteLegal, correoElectronico, tipoProducto) VALUES (@nombreComercial, @razonSocial, @rfc, @direccion, @telefono, @representanteLegal, @correoElectronico, @tipoProducto)",
+  getProvById: "SELECT * FROM Prov WHERE id_prov = @id",
+  deleteProv: "DELETE FROM Prov WHERE id_prov = @id",
+  countProv: "SELECT COUNT (*) FROM Prov",
+  updateProvById: "UPDATE Prov SET nombreComercial = @nombreComercial, razonSocial = @razonSocial, rfc = @rfc, direccion = @direccion, telefono = @telefono, representanteLegal = @representanteLegal, correoElectronico = @correoElectronico, tipoProducto = @tipoProducto WHERE id_prov = @id"
 };

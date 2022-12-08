@@ -1,0 +1,43 @@
+@api = http://localhost:3000/prov
+
+### Obteniendo todos los pagos
+GET {{api}}
+
+### Creando una solicitud de pago
+POST {{api}}
+Content-Type: application/json
+
+{
+    "nombreComercial": "La Chevería",
+    "razonSocial": "Cheve de Sonora sa de cv",
+    "rfc": "ASDF943515FHT",
+    "direccion": "Av. Tecnologico esq Solidaridad",
+    "telefono": "6623514815",
+    "representanteLegal": "Jose Maria Gutierrez",
+    "correoElectronico": "lacheveria@gmail.com",
+    "tipoProducto": "Botella vodka"
+}
+
+### Obteniendo un pago por id
+GET {{api}}/1
+
+### Eliminando un pago
+DELETE {{api}}/1
+
+### Contando los objetos Pago
+GET {{api}}/count
+
+### Actualizando un registro
+PUT {{api}}/2
+Content-Type: application/json
+
+{
+    "nombreComercial": "La Chevería",
+    "razonSocial": "Cheve de Sonora sa de cv",
+    "rfc": "ASDF943515FHT",
+    "direccion": "Av. Tecnologico esq Solidaridad",
+    "telefono": "6623514815",
+    "representanteLegal": "Jose Maria Gutierrez",
+    "correoElectronico": "lacheveria@gmail.com",
+    "tipoProducto": "Botella ron"
+}
