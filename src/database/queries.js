@@ -1,5 +1,3 @@
-import { updatePagoById } from "../controllers/pagos.controller";
-
 export const queries = {
 
   // Queries para banco
